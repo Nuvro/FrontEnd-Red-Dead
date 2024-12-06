@@ -1,29 +1,48 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: blueviolet;
     font-family: "Lobster", cursive;
+    color: white;
 }
 
 .First-Div {
     background-color: rgb(141, 0, 0);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .ImageLogo {
-    margin: 15px;
     width: 85px;
+    height: 85px;
     border-radius: 50%;
     margin-left: 25px;
 }
 
 .game-title {
-    color: white;
+    font-size: 30px;
+    flex-grow: 1;
+    text-align: center;
     padding: 10px;
-    display: contents;
-    font-size: 20px;
+}
+
+.store-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.store-item {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.store-item:hover {
+    color: #ffd700;
 }
