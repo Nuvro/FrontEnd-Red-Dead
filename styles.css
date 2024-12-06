@@ -8,7 +8,7 @@ body {
 }
 
 .First-Div {
-    background-color: rgb(192, 30, 138);
+    background-color: rgb(141, 0, 0);
     display: flex;
     align-items: center;
 }
@@ -21,6 +21,7 @@ body {
 }
 
 .h1-one {
+    color: white;
     padding: 10px;
     display: contents;
     font-size: 20px;
