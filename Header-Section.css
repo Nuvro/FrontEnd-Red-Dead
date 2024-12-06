@@ -16,7 +16,7 @@
 }
 
 .header-section:hover {
-    background-color: rgb(153, 0, 0);
+    background-color: rgb(77, 0, 0);
     /* Lighter shade on hover */
     transform: translateY(-2px);
     /* Slight lift effect on hover */
