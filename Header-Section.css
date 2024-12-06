@@ -1,0 +1,71 @@
+.header-section {
+    background-color: rgb(141, 0, 0);
+    /* Dark red background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+    /* Adds a subtle border for distinction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    font-family: 'Arial', sans-serif;
+    /* Clean, professional font */
+    transition: all 0.3s ease;
+    /* Smooth transitions for hover effects */
+}
+
+.header-section:hover {
+    background-color: rgb(153, 0, 0);
+    /* Lighter shade on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect on hover */
+}
+
+.header-section .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    /* Slight spacing for a clean look */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.header-section .logo:hover {
+    color: #f0f0f0;
+    /* Slight change in logo color on hover */
+}
+
+.header-section .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header-section .nav-links li {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-section .nav-links li:hover {
+    color: #f0f0f0;
+    /* Hover effect for links */
+}
+
+
+/* Responsive design for smaller screens */
+
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .header-section .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
