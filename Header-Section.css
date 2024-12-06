@@ -4,55 +4,98 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border-bottom: 2px solid #333;
-    /* Adds a subtle border for distinction */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Soft shadow for depth */
-    font-family: "Arial", sans-serif;
-    /* Clean, professional font */
+    padding: 20px 40px;
+    /* Added more padding for balance */
+    border-bottom: 1px solid #444;
+    /* Subtle border to separate from content */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    /* Deeper shadow for more depth */
+    font-family: 'Roboto', sans-serif;
+    /* Modern, professional font */
     transition: all 0.3s ease;
     /* Smooth transitions for hover effects */
 }
 
 .header-section:hover {
-    background-color: rgb(77, 0, 0);
+    background-color: rgb(153, 0, 0);
     /* Lighter shade on hover */
-    transform: translateY(-2px);
-    /* Slight lift effect on hover */
+    transform: translateY(-5px);
+    /* More pronounced lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow on hover */
 }
 
 .header-section .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    /* Slightly larger logo */
+    font-weight: 600;
+    /* Slightly bolder for a stronger impact */
     color: white;
-    letter-spacing: 1px;
-    /* Slight spacing for a clean look */
-    transition: color 0.3s ease;
-    /* Smooth transition for color change */
+    letter-spacing: 1.5px;
+    /* Increased spacing for more clean and modern look */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+    text-transform: uppercase;
+    /* Logo text in uppercase for a professional touch */
 }
 
 .header-section .logo:hover {
     color: #f0f0f0;
     /* Slight change in logo color on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
 }
 
 .header-section .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    /* Increased gap for better spacing */
 }
 
 .header-section .nav-links li {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    /* Slightly larger text for better readability */
     color: white;
     font-weight: 500;
-    transition: color 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for color and transform */
+}
+
+.header-section .nav-links li::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f0f0f0;
+    transition: width 0.3s ease;
 }
 
 .header-section .nav-links li:hover {
     color: #f0f0f0;
-    /* Hover effect for links */
+    /* Change text color on hover */
+    transform: translateY(-3px);
+    /* Slight upward movement on hover */
+}
+
+.header-section .nav-links li:hover::before {
+    width: 100%;
+    /* Underline effect on hover */
+}
+
+.header-section .nav-links li a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Ensure the color inherits from the list item */
+}
+
+.header-section .nav-links li:hover a {
+    color: inherit;
+    /* Inherits hover color for a smooth effect */
 }
 
 
@@ -61,11 +104,22 @@
 @media (max-width: 768px) {
     .header-section {
         flex-direction: column;
-        padding: 15px;
+        padding: 20px 30px;
+        /* Adjusted padding for mobile */
+    }
+    .header-section .logo {
+        margin-bottom: 15px;
+        /* Spacing between logo and nav links on small screens */
+        font-size: 1.6rem;
+        /* Adjust logo size on smaller screens */
     }
     .header-section .nav-links {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         text-align: center;
+    }
+    .header-section .nav-links li {
+        font-size: 1.2rem;
+        /* Increased font size for better readability on mobile */
     }
 }
