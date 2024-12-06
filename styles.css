@@ -10,7 +10,7 @@ body {
     color: white;
 }
 
-.First-Div {
+.header-section {
     background-color: rgb(141, 0, 0);
     display: flex;
     align-items: center;
